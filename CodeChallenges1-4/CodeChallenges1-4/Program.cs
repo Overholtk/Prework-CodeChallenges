@@ -7,8 +7,9 @@ namespace CodeChallenges1_4
         static void Main(string[] args)
         {
 
-            Challenge1();
-            Challenge2(1996);
+            //Challenge1();
+            //Challenge2(1996);
+            Challenge3(new int[3] { 1, 3, 2 });
         }
 
         static void Challenge1()
@@ -66,6 +67,31 @@ namespace CodeChallenges1_4
             else
             {
                 Console.WriteLine(year + " is not a leap year.");
+            }
+        }
+
+        static void Challenge3(int[] arr)
+        {
+            int sum = 0;
+            int product = 1;
+            bool positive = true;
+            foreach (int i in arr)
+            {
+                sum += i;
+                product *=i; 
+                if(i < 0)
+                {
+                    positive = false;
+                }
+            }
+
+            if(sum == product & positive == true)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
             }
         }
     }
