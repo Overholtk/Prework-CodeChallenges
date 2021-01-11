@@ -4,7 +4,9 @@ Pre work code challenge assignments
 
 ### Array Max Result:
 Get an array and a number within that array via user input, determine how many times the chosen number appears in the array, and then output the number multiplied by how many times it appears in the array.
+
 Output:
+![](https://github.com/Overholtk/Prework-CodeChallenges/blob/main/outputs/challenge%201.png)
 
 ### Leap Year Calculator:
 Given an inputted year, determine if it is a leap year based on the mathematical criteria provided.
