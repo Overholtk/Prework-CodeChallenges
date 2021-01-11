@@ -7,9 +7,10 @@ namespace CodeChallenges1_4
         static void Main(string[] args)
         {
 
-            //Challenge1();
-            //Challenge2(1996);
+            Challenge1();
+            Challenge2(1996);
             Challenge3(new int[3] { 1, 3, 2 });
+            Challenge4();
         }
 
         static void Challenge1()
@@ -93,6 +94,44 @@ namespace CodeChallenges1_4
             {
                 Console.WriteLine("No");
             }
+        }
+
+        static void Challenge4()
+        {
+            Console.WriteLine("Please specify the number of rows: ");
+            string rows = Console.ReadLine();
+            Console.WriteLine("Please Specify the number of columns: ");
+            string columns = Console.ReadLine();
+
+            int l = Int32.Parse(rows);
+            int w = Int32.Parse(columns);
+
+            int[,] myArray = new int[l, w];
+
+            for(int i = 0; i < l; i++)
+            {
+                for(int j = 0; j < w; j++)
+                {
+                    Console.WriteLine("Enter data point for dataset " + (i + 1) + ": ");
+                    string input = Console.ReadLine();
+                    int num = Int32.Parse(input);
+                    myArray[i, j] = num;
+
+                }
+            }
+
+            int[] totals = new int[l];
+            for(var i = 0; i < l; i++)
+            {
+                int sum = 0;
+                for (var j = 0; j < w; j++)
+                {
+                    sum += myArray[i, j];
+                }
+                totals[i] = sum;
+                
+            }
+            Console.WriteLine("[{0}]", string.Join(", ", totals));
         }
     }
 } 
