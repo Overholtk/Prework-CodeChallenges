@@ -8,6 +8,7 @@ namespace CodeChallenges1_4
         {
 
             Challenge1();
+            Challenge2(1996);
         }
 
         static void Challenge1()
@@ -40,6 +41,32 @@ namespace CodeChallenges1_4
             int score = num * count;
             //TODO: output num
             Console.WriteLine(score);
+        }
+
+        static void Challenge2(int year)
+        {
+            bool leap = false;
+            int check4 = year % 4;
+            int check100 = year % 100;
+            int check400 = year % 400;
+
+            if(check4 == 0 & check100 != 0)
+            {
+                leap = true;
+            }
+            if(check4 == 0 & check100 == 0 & check400 == 0)
+            {
+                leap = true;
+            }
+
+            if(leap == true)
+            {
+                Console.WriteLine(year + " is a leap year.");
+            }
+            else
+            {
+                Console.WriteLine(year + " is not a leap year.");
+            }
         }
     }
 } 
